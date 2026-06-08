@@ -25,7 +25,7 @@ const statConfig = [
   },
 ];
 
-export default function StatsCards({ filters }) {
+export default function StatsCards() {
   const { stats, loading, error } = useMarketStats();
 
   console.log('StatsCards - stats:', stats, 'loading:', loading, 'error:', error);
@@ -53,7 +53,7 @@ export default function StatsCards({ filters }) {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      {statConfig.map(({ key, label, icon:Icon, format, color, bg }) => (
+      {statConfig.map(({ key, label, format, color }) => (
         <div key={key} className="card">
           <div className="flex items-center justify-between mb-3">
             <p className="text-sm text-slate-500 font-medium">{label}</p>

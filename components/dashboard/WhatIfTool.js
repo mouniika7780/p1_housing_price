@@ -94,7 +94,7 @@ export default function WhatIfTool() {
             Predicted Price
           </p>
           <p className="text-2xl font-bold text-indigo-600">
-            ${result.prediction.toLocaleString()}
+            ₹{result.prediction.toLocaleString()}
           </p>
         </div>
       )}

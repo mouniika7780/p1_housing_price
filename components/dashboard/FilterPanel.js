@@ -22,9 +22,10 @@ export default function FilterPanel({ onFilterChange }) {
   };
 
   const handleApply = () => {
-    const cleaned = Object.fromEntries(
-      Object.entries(filters).filter(([_, v]) => v !== '')
-    );
+    const cleaned = Object.fromEntries(Object.entries(filters).filter(([_, v]) => v !== ''));
+
+    console.log('Applying filters:', cleaned);
+
     onFilterChange(cleaned);
     setIsOpen(false);
   };

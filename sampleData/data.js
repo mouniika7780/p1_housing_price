@@ -1,6 +1,6 @@
 export const filterFields = [
-  {name:'min_price',label:'Min Price ($)',placeholder:'e.g. 100000' },
-  {name:'max_price',label:'Max Price ($)',placeholder:'e.g. 400000' },
+  {name:'min_price',label:'Min Price (₹)',placeholder:'e.g. 100000' },
+  {name:'max_price',label:'Max Price (₹)',placeholder:'e.g. 400000' },
   {name:'min_bedrooms',label:'Min Bedrooms',placeholder:'e.g. 2'},
   {name:'max_bedrooms',label:'Max Bedrooms',placeholder:'e.g. 4'},
 ];

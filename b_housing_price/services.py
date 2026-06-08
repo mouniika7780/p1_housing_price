@@ -3,7 +3,7 @@ import numpy as np
 import httpx
 from functools import lru_cache
 
-PYTHON_API_URL = "http://localhost:8001/api/v1"
+PYTHON_API_URL = "http://localhost:8000/api/v1"
 
 # PYTHON_API_URL = "http://127.0.0.1:8001/api/v1"
 
@@ -46,7 +46,7 @@ def get_market_stats(filters=None):
     }
     return stats
 
-def get_price_distribution(filters=None):
+def get_price_distribution():
     df = load_housing_data()
     bins = [0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, float("inf")]
     labels = ["<100k","100-200k","200-300k","300-400k","400-500k","500-600k","600-700k","700-800k","800-900k","900k+"]
@@ -73,8 +73,5 @@ def get_properties(filters=None, page=1, page_size=20):
 
 async def what_if_prediction(payload: dict):
     async with httpx.AsyncClient() as client:
-        response = await client.post(
-            f"{PYTHON_API_URL}/predict",
-            json=payload
-        )
+        response = await client.post(f"{PYTHON_API_URL}/predict",json=payload)
         return response.json()

@@ -15,14 +15,12 @@ export default function HomePage() {
         </p>
         <Link
           href="/market-analysis"
-          className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-lg transition-colors no-underline"
+          className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700
+          text-white font-medium px-6 py-3 rounded-lg transition-colors no-underline"
         >
           Go to Dashboard →
         </Link>
       </div>
-
-      
-
     </div>
   );
 }
